@@ -1,7 +1,7 @@
 # Production build
 FROM nginx:latest
 
-COPY --from=inspectorgadget12/minimal_lambda_adapter /lambda-adapter /opt/extensions/lambda-adapter
+COPY --from=inspectorgadget12/lambda-runtime-adapter /lambda-runtime-adapter /opt/extensions/lambda-adapter
 
 # config files
 COPY ./lambda-runtime/nginx.conf                /etc/nginx/nginx.conf
